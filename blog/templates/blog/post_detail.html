@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<style>
+    button {
+        float: right;
+        position:relative;
+        background-color: red;
+        border-radius: 5px;
+        font: bold;
+        font-size:medium
+    }
+</style>
+
+    <button><a href="/blog/">Back</a></button>
+    <h2>{{ post.title }}</h2>
+    <p class="date">
+        Published in {{ post.created }} by {{ post.author }}
+    </p>
+    {{ post.body|linebreaks }}
+{% endblock %}

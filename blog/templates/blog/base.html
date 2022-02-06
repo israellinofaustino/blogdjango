@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+            body {
+                margin: 0 25%;
+                font-family: sans-serif;
+                font-size: 1.5rem;
+                color: #111111;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: serif;
+                font-weight: normal;
+                border-bottom: 1px solid;
+            }
+
+            h2 {
+                color: #0072aa;
+                font-weight: normal;
+                margin-bottom: 1px;
+            }
+
+            h6{
+                float: right;
+                position: relative;
+            }
+
+            a {
+                color:#0072aa;
+                text-decoration:none;
+            }
+
+            p.date {
+                font-size: 0.8rem;
+                font-style: italic;
+                margin-top: 1px;
+            }
+            button{
+                float: right;
+                position:relative;
+                background-color: red;
+                border-radius: 5px;
+                font: bold;
+                font-size: small;
+            }
+
+            footer{
+                font-size: small;
+                float: right;
+            }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>My First Blog</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Author: Israel Faustino<br>
+            <a target="__blank" href="https://www.linkedin.com/in/israellinofaustino">LinkedIn | </a>
+            <a target="__blank" href="https://github.com/israellinofaustino">Github | </a>
+            <a target="__blank" href="https://coursephp.herokuapp.com">PHP Learning</a>    
+        </p>
+        <h6>Django Framework</h6>
+    </footer>
+</body>
+</html>
